@@ -1,0 +1,25 @@
+<%= form_for(@putnik) do |f| %>
+  <% if @putnik.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@putnik.errors.count, "error") %> prohibited this putnik from being saved:</h2>
+
+      <ul>
+      <% @putnik.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.number_field :phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

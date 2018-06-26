@@ -1,0 +1,2 @@
+module PutniksHelper
+end

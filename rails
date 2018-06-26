@@ -1,0 +1,21 @@
+
+
+    sudo apt-get install ruby-dev
+
+one many/join table	
+	belongs_to :scholl
+
+v many
+	has_many :teachers 
+edin parametur unkalen_____>>>>>	validates :teacher_id, uniqueness: true 
+
+many many
+	has_many :team_member_connections
+	has_many :teams, through: :team_member_connections
+email____>>>>>   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create	
+
+
+routs: do  tablicata
+, path: '/B_04_Valeri_Tzvetanov'
+
+

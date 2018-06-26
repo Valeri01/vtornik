@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Putnik Cars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Putnic</th>
+      <th>Car</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @putnik_cars.each do |putnik_car| %>
+      <tr>
+        <td><%= putnik_car.putnic_id %></td>
+        <td><%= putnik_car.car_id %></td>
+        <td><%= link_to 'Show', putnik_car %></td>
+        <td><%= link_to 'Edit', edit_putnik_car_path(putnik_car) %></td>
+        <td><%= link_to 'Destroy', putnik_car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Putnik car', new_putnik_car_path %>

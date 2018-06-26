@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Putnic:</strong>
+  <%= @putnik_car.putnic_id %>
+</p>
+
+<p>
+  <strong>Car:</strong>
+  <%= @putnik_car.car_id %>
+</p>
+
+<%= link_to 'Edit', edit_putnik_car_path(@putnik_car) %> |
+<%= link_to 'Back', putnik_cars_path %>

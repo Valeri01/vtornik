@@ -1,0 +1,25 @@
+<%= form_for(@putnik_car) do |f| %>
+  <% if @putnik_car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@putnik_car.errors.count, "error") %> prohibited this putnik_car from being saved:</h2>
+
+      <ul>
+      <% @putnik_car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :putnic_id %><br>
+    <%= f.number_field :putnic_id %>
+  </div>
+  <div class="field">
+    <%= f.label :car_id %><br>
+    <%= f.number_field :car_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
