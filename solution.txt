@@ -1,4 +1,1 @@
-test
-if Teacher.find(teacher_id).name.length != School.find(school_id).number
-    errors.add(:name, "Cannot add that teacher")
-end
+
